@@ -1,3 +1,20 @@
+spring:
+  profiles:
+    active: local
+---
+
+spring:
+  profiles: local
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/springbot?serverTimezone=UTC&characterEncoding=UTF-8
+    username: nohhee
+    password: 1234
+
+  jpa:
+    hibernate:
+      ddl-auto: update # 운영시에는 validate 추천
+    show-sql: true
 
 telegram:
   bot:
